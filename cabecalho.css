@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ccc;
+    overflow-x: hidden;
+}
+.cabecalho{
+    background-color: #000000;
+    flex-wrap: wrap;
+}
+.container_cabecalho{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    background-image: url(img/logo.jpg) ;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 150px;
+}
+.icone_hamburguer{
+    width: 2.2rem;
+    height: 1.5rem;
+    position: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.linha{
+    background-color: #ffffff;
+    height: .25rem;
+    border-radius: 10px;
+}
+.icone_notificacao{
+    background: none;
+    border: none;
+    outline: none;
+}
+.icone_notificacao i::before{
+   background-image: url(img/notificacao.jpg);
+   background-size: 34px;
+   background-repeat: no-repeat;
+   content: "";
+   width: 34px;
+   height: 40px;
+   display: flex;
+}
+.menu_lateral{
+    position: absolute;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    text-align: center;
+    left: -50vw;
+    transition: 0.50s;
+    border-radius: 0 0 1rem 0;
+}
+.menu_lateral a{
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.menu_lateral-ativo{
+    position: absolute;
+    left: 0;
+    transition: 0.50s;
+}
+.menu_lateral a:active{
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.2s;
+    font-size: 17px;
+}
+.menu_notificacao{
+    background-color: #202020;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    right: -55vw;
+    transition: 0.50s;
+    border-radius: 0 0 0 1rem;
+}
+.menu_notificacao p{
+    padding: 1.5rem 0;
+    color: #ffffff;
+}
+.menu_notificacao-ativo{
+    position: absolute;
+    right: 0;
+    transition: 0.50s;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 800px) {
+    .icone_menu{
+        cursor: pointer;
+    }
+    .menu_lateral{
+        position: absolute;
+        width: 31.5%;
+    }
+    .menu_lateral a{
+        font-size: 18px;
+        transition: 0.2s;
+    }
+    .menu_lateral a:hover{
+        background-color: #ffffff;
+        color: #000000;
+        transition: 0.2s;
+        font-size: 20px;
+    }
+    .icone_notificacao{
+        cursor: pointer;
+    }
+    .menu_notificacao{
+        width: 31%;
+    }
+}
